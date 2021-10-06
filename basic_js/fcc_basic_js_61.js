@@ -1,11 +1,4 @@
-// Only change code below this line
-function countdown(n){
-    if (n < 1) {
-        return []
-    } else {
-        const array = countdown(n - 1)
-        array.unshift(n)
-        return array
-    }
+function rangeOfNumbers(startNum, endNum) {
+    return startNum === endNum ? [startNum]
+        : rangeOfNumbers(startNum, endNum - 1).concat(endNum)
 }
-// Only change code above this line
